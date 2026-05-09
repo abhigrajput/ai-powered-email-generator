@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #0f172a;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.container {
+    width: 85%;
+    max-width: 950px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+h1 {
+    color: #38bdf8;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.templates {
+    margin-bottom: 20px;
+}
+
+.templates button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #334155;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.templates button:hover {
+    background: #475569;
+}
+
+textarea {
+    width: 100%;
+    height: 180px;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    font-size: 17px;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+select {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.button-group {
+    margin-top: 30px;
+}
+
+button {
+    padding: 14px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#generateBtn {
+    background: #38bdf8;
+    color: black;
+}
+
+#generateBtn:hover {
+    background: #0ea5e9;
+}
+
+#copyBtn {
+    background: #22c55e;
+    color: white;
+}
+
+#copyBtn:hover {
+    background: #16a34a;
+}
+
+#downloadBtn {
+    background: #f59e0b;
+    color: white;
+}
+
+#downloadBtn:hover {
+    background: #d97706;
+}
+
+.output {
+    margin-top: 40px;
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: left;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.output h2 {
+    color: #38bdf8;
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+#result {
+    white-space: pre-wrap;
+    line-height: 2;
+    font-size: 18px;
+    color: #f1f5f9;
+}
+
+.loader {
+    border: 6px solid #1e293b;
+    border-top: 6px solid #38bdf8;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    animation: spin 1s linear infinite;
+    margin: 30px auto;
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    .container {
+        width: 92%;
+    }
+    textarea {
+        height: 160px;
+    }
+    button {
+        width: 100%;
+    }
+    .options {
+        flex-direction: column;
+    }
+    select {
+        width: 100%;
+    }
+}

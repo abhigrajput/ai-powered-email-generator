@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Smart Email Assistant</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>AI Smart Email Assistant</h1>
+
+        <p class="subtitle">
+            Generate professional emails instantly using Generative AI
+        </p>
+
+        <div class="templates">
+
+            <button onclick="setTemplate('internship')">
+                Internship
+            </button>
+
+            <button onclick="setTemplate('leave')">
+                Leave
+            </button>
+
+            <button onclick="setTemplate('complaint')">
+                Complaint
+            </button>
+
+        </div>
+
+        <textarea
+            id="emailPrompt"
+            placeholder="Describe the email you want to generate...">
+        </textarea>
+
+        <div class="options">
+
+            <select id="emailType">
+
+                <option value="">Select Email Type</option>
+
+                <option>Internship Request</option>
+
+                <option>Leave Request</option>
+
+                <option>Complaint Email</option>
+
+                <option>Job Application</option>
+
+                <option>Meeting Request</option>
+
+            </select>
+
+            <select id="tone">
+
+                <option value="">Select Tone</option>
+
+                <option>Professional</option>
+
+                <option>Formal</option>
+
+                <option>Friendly</option>
+
+                <option>Confident</option>
+
+            </select>
+
+        </div>
+
+        <div class="button-group">
+
+            <button id="generateBtn">
+                Generate Email
+            </button>
+
+            <button id="copyBtn">
+                Copy Email
+            </button>
+
+            <button id="downloadBtn">
+                Download
+            </button>
+
+        </div>
+
+        <div id="loader" class="loader"></div>
+
+        <div class="output">
+
+            <h2>Generated Email</h2>
+
+            <p id="result">
+                Your generated email will appear here...
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
